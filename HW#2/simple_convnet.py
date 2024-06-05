@@ -34,7 +34,7 @@ class SimpleConvNet:
         conv_output_size = (input_size - filter_size + 2*filter_pad) / filter_stride + 1
         pool_output_size = int(filter_num * (conv_output_size/2) * (conv_output_size/2))
 
-        # 가중치 초기화 : He 초깃값으로 변경
+        # 가중치 초기화
         self.params = {}
         self.params['W1'] = weight_init_std * np.random.randn(filter_num, input_dim[0], filter_size, filter_size)
         self.params['b1'] = np.zeros(filter_num)
